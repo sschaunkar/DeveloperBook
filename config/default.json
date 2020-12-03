@@ -1,0 +1,6 @@
+{
+    "mongoURI": "mongodb+srv://admin-sachin:ra1isdead@cluster0.2glrp.mongodb.net/devsocialnetwork?retryWrites=true&w=majority",
+    "jwtSecret": "This is a Secret",
+    "githubClientID":"54dc33706e0d57465654",
+    "githubClientSecret":"f0f9f0760392b8d49203def2b4eaa7c065c50d69"
+}
