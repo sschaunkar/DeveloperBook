@@ -16,8 +16,7 @@ const DashBoard = ({
 }) => {
   useEffect(() => {
     getCurrentProfile();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [getCurrentProfile]);
 
   return loading && profile == null ? (
     <Spinner />
