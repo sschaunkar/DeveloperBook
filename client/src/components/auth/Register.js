@@ -46,7 +46,7 @@ export const Register = ({ setAlert, register, isAuthenticated }) => {
             name="name"
             value={name}
             onChange={(e) => handleChange(e)}
-            // required
+            required
           ></input>
         </div>
         <div className="form-group">
@@ -56,7 +56,7 @@ export const Register = ({ setAlert, register, isAuthenticated }) => {
             name="email"
             value={email}
             onChange={(e) => handleChange(e)}
-            // required
+            required
           ></input>
           <small className="form-text">
             This site uses Gravatar so if you want a profile image, use a
@@ -71,7 +71,7 @@ export const Register = ({ setAlert, register, isAuthenticated }) => {
             value={password}
             onChange={(e) => handleChange(e)}
             minLength="6"
-            // required
+            required
           />
         </div>
         <div className="form-group">
@@ -81,7 +81,7 @@ export const Register = ({ setAlert, register, isAuthenticated }) => {
             name="password2"
             value={password2}
             onChange={(e) => handleChange(e)}
-            // minLength="6"
+            minLength="6"
           />
         </div>
         <input type="submit" className="btn btn-primary" value="Register" />
@@ -93,7 +93,7 @@ export const Register = ({ setAlert, register, isAuthenticated }) => {
   );
 };
 Register.propTypes = {
-  setAlert: PropTypes.func.isRequired, //ptfr+enter
+  setAlert: PropTypes.func.isRequired,
   register: PropTypes.func.isRequired,
   isAuthenticated: PropTypes.bool,
 };

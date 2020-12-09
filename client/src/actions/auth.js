@@ -72,6 +72,7 @@ export const login = (email, password) => async (dispatch) => {
       type: LOGIN_SUCCESS,
       payload: res.data,
     });
+    dispatch(setAlert("Login Successful", "success"));
     dispatch(loadUser());
   } catch (err) {
     const errors = err.response.data.errors;
@@ -89,5 +90,5 @@ export const login = (email, password) => async (dispatch) => {
 export const logout = () => (dispatch) => {
   dispatch({ type: CLEAR_PROFILE });
   dispatch({ type: LOGOUT });
-  <Redirect to="/login" />
+  <Redirect to="/login" />;
 };
