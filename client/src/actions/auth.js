@@ -11,6 +11,7 @@ import {
 } from "./types";
 import { setAlert } from "./alert";
 import setAuthToken from "../utils/setAuthToken";
+import { Redirect } from "react-router-dom";
 
 //Load User----------------------------------------------------
 export const loadUser = () => async (dispatch) => {
@@ -88,4 +89,5 @@ export const login = (email, password) => async (dispatch) => {
 export const logout = () => (dispatch) => {
   dispatch({ type: CLEAR_PROFILE });
   dispatch({ type: LOGOUT });
+  <Redirect to="/login" />
 };
