@@ -42,6 +42,7 @@ img {
   padding: 0 2rem;
   margin-top: 6rem;
   margin-bottom: 3rem;
+  min-height: 100vh;
 }
 
 /* Text Styles*/
@@ -336,8 +337,8 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: sticky;
-  padding: 0.7rem 2rem;
+  position: fixed;
+  padding: 0.5rem 2rem;
   z-index: 1;
   width: 100%;
   bottom: 0;
