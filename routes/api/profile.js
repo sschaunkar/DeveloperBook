@@ -112,7 +112,7 @@ router.post(
 router.get("/", async (req, res) => {
   try {
     const profiles = await Profile.find().populate("user", ["name", "avatar"]);
-    res.json(profiles);
+    return res.json(profiles);
   } catch (err) {
     console.error(err);
     res.status(500).send("Server Error");
@@ -300,10 +300,9 @@ router.get("/github/:username", async (req, res) => {
     request(options, (error, response, body) => {
       if (error) console.error(error);
       if (response.statusCode !== 200) {
-        res.status(404).send("No Github profile found");
-        console.log(body);
+        return res.status(404).send("No Github profile found");
       }
-      res.json(JSON.parse(body));
+      return res.json(JSON.parse(body));
     });
   } catch (err) {
     console.error(err.message);
