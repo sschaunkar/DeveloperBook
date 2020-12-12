@@ -7,6 +7,8 @@ import { Spinner } from "../layout/Spinner";
 import { DashboardActions } from "./DashboardActions";
 import Experience from "./Experience";
 import Education from "./Education";
+import store from "../../store";
+import { loadUser } from "../../actions/auth";
 
 const DashBoard = ({
   getCurrentProfile,
@@ -15,6 +17,7 @@ const DashBoard = ({
   deleteAccount,
 }) => {
   useEffect(() => {
+    store.dispatch(loadUser());
     getCurrentProfile();
   }, [getCurrentProfile]);
 
